@@ -102,3 +102,22 @@ An optional second argument to @import rule is a list of media queries:
 @import '/print-styles.css' print;
 @import url('landscape.css') screen and (orientation:landscape);
 ```
+### Section 1.4: Inline Styles  
+Use inline styles to apply styling to a specific element. Note that this is not optimal. Placing style rules in a <style> tag or external CSS file is encouraged in order to maintain a distinction between content and presentation.
+Inline styles override any CSS in a <style> tag or external style sheet. While this can be useful in some circumstances, this fact more often than not reduces a project's maintainability.
+The styles in the following example apply directly to the elements to which they are attached.
+```
+ <h1 style="color: green; text-decoration: underline;">Hello world!</h1> <p style="font-size: 25px; font-family: 'Trebuchet MS';">I ♥ CSS</p>
+```
+Inline styles are generally the safest way to ensure rendering compatibility across various email clients, programs and devices, but can be time-consuming to write and a bit challenging to manage.
+### Section 1.5: Changing CSS with JavaScript
+#### Pure JavaScript
+It's possible to add, remove or change CSS property values with JavaScript through an element's style property.
+```
+var el = document.getElementById("element"); 
+el.style.opacity = 0.5;
+el.style.fontFamily = 'sans-serif';
+```
+Note that style properties are named in lower camel case style. In the example you see that the css property font- family becomes fontFamily in javascript.
+As an alternative to working directly on elements, you can create a <style> or <link> element in JavaScript and append it to the <body> or <head> of the HTML document.
+### Section 1.6: Styling Lists with CSS
