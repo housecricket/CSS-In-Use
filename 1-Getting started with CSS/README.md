@@ -78,3 +78,27 @@ CSS enclosed in <style></style> tags within an HTML document functions like an e
     <p>I ♥ CSS</p>
 </body>
 ```
+### Section 1.3: CSS @import rule  
+The @import CSS at-rule is used to import style rules from other style sheets. These rules must precede all other types of rules, except @charset rules; as it is not a nested statement, @import cannot be used inside conditional group at-rules. @import.
+#### How to use @import  
+You can use @import rule in following ways:  
+**a) With internal style tag**
+```
+<style>
+ @import url('/css/styles.css');
+</style>
+```
+**b) With external stylesheet**  
+The following line imports a CSS file named additional-styles.css in the root directory into the CSS file in which it appears:
+```
+@import '/additional-styles.css';
+```
+Importing external CSS is also possible. A common use case are font files.
+```
+@import 'https://fonts.googleapis.com/css?family=Lato';
+```
+An optional second argument to @import rule is a list of media queries:  
+```
+@import '/print-styles.css' print;
+@import url('landscape.css') screen and (orientation:landscape);
+```
