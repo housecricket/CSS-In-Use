@@ -57,6 +57,7 @@ p.green { color: #006600; }
 Now all your paragraphs with the 'green' class will be written in darker green rather than light green.
 ### Section 1.2: Internal Styles    
 CSS enclosed in <style></style> tags within an HTML document functions like an external stylesheet, except that it lives in the HTML document it styles instead of in a separate file, and therefore can only be applied to the document in which it lives. Note that this element must be inside the <head> element for HTML validation (though it will work in all current browsers if placed in body).
+***hello-world.html**  
 ```
 <head>
     <style>
