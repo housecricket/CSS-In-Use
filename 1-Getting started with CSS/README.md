@@ -1,6 +1,4 @@
 ```
-Now all your paragraphs with the 'green' class will be written in darker green rather than light green.   
-Other principles apply, such as the '!important' rule, specificity, and inheritance.   
 When someone first visits your website, their browser downloads the HTML of the current page plus the linked CSS file. Then when they navigate to another page, their browser only needs to download the HTML of that page; the CSS file is cached, so it does not need to be downloaded again. Since browsers cache the external stylesheet, your pages load faster.
 ```
 ### Section 1.1: External Stylesheet   
@@ -57,3 +55,4 @@ All your paragraphs with the 'green' class will be written in light green, but y
 ```
 p.green { color: #006600; }
 ```
+Now all your paragraphs with the 'green' class will be written in darker green rather than light green.
