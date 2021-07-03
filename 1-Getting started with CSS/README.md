@@ -34,3 +34,24 @@ p {
     font-family: 'Trebuchet MS', sans-serif;
 }
 ```
+Make sure you include the correct path to your CSS file in the href. If the CSS file is in the same folder as your HTML file then no path is required (like the example above) but if it's saved in a folder, then specify it like this href="foldername/style.css".  
+```
+<link rel="stylesheet" type="text/css" href="foldername/style.css">
+```
+External stylesheets are considered the best way to handle your CSS. There's a very simple reason for this: when
+you're managing a site of, say, 100 pages, all controlled by a single stylesheet, and you want to change your link colors from blue to green, it's a lot easier to make the change in your CSS file and let the changes "cascade" throughout all 100 pages than it is to go into 100 separate pages and make the same change 100 times. Again, if you want to completely change the look of your website, you only need to update this one file.   
+You can load as many CSS files in your HTML page as needed.
+```
+ <link rel="stylesheet" type="text/css" href="main.css"> <link rel="stylesheet" type="text/css" href="override.css">
+```
+CSS rules are applied with some basic rules, and order does matter. For example, if you have a main.css file with some code in it:
+```
+p.green { color: #00FF00; }
+```
+All your paragraphs with the 'green' class will be written in light green, but you can override this with another .css file just by including it after main.css. You can have override.css with the following code follow main.css, for example:   
+```
+p.green { color: #006600; }
+```
+Now all your paragraphs with the 'green' class will be written in darker green rather than light green.   
+Other principles apply, such as the '!important' rule, specificity, and inheritance.   
+When someone first visits your website, their browser downloads the HTML of the current page plus the linked CSS file. Then when they navigate to another page, their browser only needs to download the HTML of that page; the CSS file is cached, so it does not need to be downloaded again. Since browsers cache the external stylesheet, your pages load faster.
